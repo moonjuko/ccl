@@ -1,0 +1,19 @@
+{
+  "name": "ccl",
+  "version": "1.0.0",
+  "description": "Website that allows users to purchase land in Mars an chat with Aliens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonjuko/ccl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moonjuko/ccl/issues"
+  },
+  "homepage": "https://github.com/moonjuko/ccl#readme"
+}
