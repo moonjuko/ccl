@@ -9,17 +9,17 @@ async function checkPassword(password, hash,) {
     return pw;
 }
 
-function authenticateUser({username, password}, users, res) {
+function authenticateUser({code, password}, users, res) {
 
-    const user = users.find(u => {return u.username === username && u.password === password;});
+    const user = users.find(u => {return u.code === code && u.password === password;});
 
     if(user) {
-        const accessToken = jwt.sign({id: user.id, username: user.username}, ACCESS_TOKEN_SECRET);
+        const accessToken = jwt.sign({id: user.id, code: user.code}, ACCESS_TOKEN_SECRET);
         res.cookie("accessToken", accessToken);
         console.log(accessToken);
         res.redirect("/users/" + user.id);
     } else {
-        res.send("Username or password are incorrect");
+        res.send("code or password are incorrect");
     }
 }
 

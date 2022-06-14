@@ -1,6 +1,16 @@
 const db = require("../services/database").config;
 const bcrypt = require("bcrypt");
 
+let getDestination = () => new Promise((resolve, reject) => {
+    db.query("SELECT * from destinations WHERE id=?", [id], (err, destination, fields) => {
+        if(err) {
+            reject(err);
+        } else {
+            resolve(destination[0]);
+        }
+    });
+});
+
 let getUsers = () => new Promise((resolve, reject) => {
     db.query("SELECT * from users", (err, users, fields) => {
         if(err) {
@@ -43,10 +53,9 @@ let deleteUser = (id) => new Promise((resolve, reject) => {
 
 let updateUser = (userData) => new Promise((resolve, reject) => {
     let sql = "UPDATE users SET" +
-        " username=" + db.escape(userData.username) +
-        ", email=" + db.escape(userData.email) +
+        " name=" + db.escape(userData.name) +
+        ", code=" + db.escape(userData.code) +
         ", password=" + db.escape(userData.password) +
-        ", image=" + db.escape(userData.image) +
         " WHERE id=" + parseInt(userData.id);
 
     db.query(sql, function(err, user, fields) {
@@ -59,14 +68,12 @@ let insertUser = (userData) => new Promise(async (resolve, reject) => {
     console.log(userData);
 
     let salt = Math.ceil(Math.random()*1024);
-    let encryptedPassword = await bcrypt.hash(userData.password, salt)
+    let encryptedPassword = await bcrypt.hash(userData.password)
 
-    let sql = "INSERT into users(username, email, password, image, salt) values (" +
-        "" + db.escape(userData.username) +
-        "," + db.escape(userData.email) +
+    let sql = "INSERT into users(name, code, password) values (" +
+        "" + db.escape(userData.name) +
+        "," + db.escape(userData.code) +
         "," + db.escape(encryptedPassword) +
-        "," + db.escape(userData.image)+
-        "," + db.escape(salt) +
         ")"
 
     db.query(sql, function(err, user, fields) {
@@ -83,4 +90,5 @@ module.exports = {
     getAdmins,
     deleteUser,
     insertUser,
+    getDestination,
 }

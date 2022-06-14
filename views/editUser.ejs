@@ -14,7 +14,7 @@
 <body>
 
 <div class="container">
-    <img class="bigImage" src="../../images/<%= user.image %>" alt="<%= user.firstName %>">
+    <img class="bigImage" src="../../images/<%= user.image %>" alt="<%= user.name %>">
     <div class="textContainer">
         <form action="/users/<%= user.id %>" method="post">
             <% Object.keys(user).forEach(function(key) {%>
