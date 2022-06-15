@@ -4,30 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower Portal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Terra Nova</title>
     <link rel="stylesheet" href="../../css/login.css">
-    <link rel="stylesheet" href="../../css/button.css">
 </head>
 <body>
-
-<div class="container">
-    <div class="textContainer">
-        <form action="http://localhost:3000/login" method="post">
-            <div class="container">
-                <label for="code">Martian Code</label>
-                <input type="text" name ="code">
-
-                <label for="password">Password</label>
-                <input type="password" name ="password">
-                </label>
-            </div>
-            <button type="submit" value="Send data">Login</button>
-        </form>
+<div class="box glowing">
+    <div class="container">
+        <div class="textContainer">
+            <form action="../login" method="post">
+                <br>
+                <h1>LOGIN</h1>
+                <p>You don’t have an account ?
+                    <a href="/register" style="text-decoration: none;">Sign Up.</a></p> <br>
+                <div><label> Martian code : </label><input type="text" name="code"> </div><br>
+                <div><label> Password : </label><input type="text" name="password"> </div>
+                <button type="submit" > LOGIN</button>
+            </form>
+        </div>
     </div>
 </div>
-
 </body>
 </html>

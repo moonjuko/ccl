@@ -8,6 +8,7 @@ const authenticationService = require("../services/authentication.js");
 router.use(authenticationService.authenticateJWT);
 
 
+
 router.get("/", authenticationService.checkIfAdmin);
 
 router.get("/:id", authenticationService.checkIfOwner, authenticationService.checkIfAdmin);

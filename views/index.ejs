@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Space</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Terra Nova</title>
 </head>
 <body>
-<div class="grid">
-    <div>
-        Header
+<header></header>
+<div class="BG">
+    <div id="abc">
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
     </div>
-
-    <nav>
-        LD-5677
-    </nav>
-
-    <article>
-        Ciri HX3
-    </article>
-
-    <aside>
-        Meon 13
-    </aside>
-
-    <footer>
-        Footer
-    </footer>
+<!--    <form action="http://localhost:3000/register" method="post">-->
+<!--        <button id="signButton" type="submit" value="Send data">SIGN UP</button>-->
+<!--    </form>-->
+    <a id="signButton" href="/register" style="text-decoration: none">SIGN UP</a>
 </div>
-
-
-        <a class="button btn btn-white" href="http://localhost:3000/destinations">
-            VIEW DESTINATIONS
-        </a>
-
+<div id="low">
+    <h1>Choose a Destination</h1> <br>
+    <p>Here you will be able to view the three options of territories you can choose from. They all vary from landscapes to alien population. So be aware that your choice is very important to your everyday life since you can only move territories after one year. Please take a close look at the destinations bellow and make a final choice. </p>
+</div>
+</div>
+<div class="container">
+    <div class="choiceOne">
+        <button> <a href="/ciri" style="text-decoration: none">VIEW</a></button>
+    </div>
+    <div class="choiceTwo">
+        <button> <a href="/ld" style="text-decoration: none">VIEW</a></button>
+        ></div>
+    <div class="choiceThree">
+        <button> <a href="/muan" style="text-decoration: none">VIEW</a></button></div>
+</div>
 
 </body>
 </html>

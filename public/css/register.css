@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Koulen&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orelega+One&family=Quicksand:wght@300;400;500;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,400;1,500;1,800;1,900&family=Righteous&display=swap');
+
+body {
+background-color: #100113;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  height: 100vh;
+    overflow: hidden;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+
+}
+
+p {
+  text-align: left;
+  width: 450px;
+  font-weight: 100;
+  font-size: 25px;
+  text-decoration: none;}
+
+h1{
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 60px;
+}
+
+a {
+  color: white;
+}
+
+button {
+  display: flex;
+  width: 19%;
+  padding: 10px;
+  margin: 90px 40px 40px 0px;
+  align-items:center;
+  justify-content:center;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: #6512b9;
+  font-weight: 330;
+  text-decoration: none;
+}
+
+
+.box {
+  position: relative;
+  height:  800px;
+  width: 1440px;
+  display: block;
+  background-image:url("../images/loginBG.png") ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.glowing::before{
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #e8f74d, #ff6600d9, #ad27ad, #bd2681, #6512b9, #ff3300de, #5aabde);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: glower 20s linear infinite;
+}
+
+@keyframes glower {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.textContainer {
+  margin: 0px 0px 40px 20px;
+  font-size: 30px;
+  color: #fff;
+  width: 600px;
+  height: 550px;
+  padding: 10px 30px 0px 50px;
+  border-radius: 15px;
+
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 660px;
+  height: 800px;
+  background: linear-gradient(90deg, #FF41E0, transparent);
+  }
+
+input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+}

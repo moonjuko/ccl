@@ -4,6 +4,9 @@ const router = express.Router();
 const authenticationService = require("../services/authentication.js");
 const userModel = require("../models/userModel")
 const userController = require("../controllers/userController")
+const userRouter = require("./user.js")
+
+router.use("/user", userRouter);
 
 router.get("/", (req, res) => {
     res.render("index");

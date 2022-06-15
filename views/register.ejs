@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user Portal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/button.css">
+    <title>Terra Nova</title>
+    <link rel="stylesheet" href="../../css/register.css">
 </head>
 <body>
-
+<div class="box glowing">
 <div class="container">
     <div class="textContainer">
         <form action="../register" method="post">
-            <div><label>Full name</label><input type="text" name="name">  </div>
-            <div><label>Martian Code</label><input type="text" name="code"> </div>
-            <div><label>Password</label><input type="text" name="password"> </div>
-            <input class="button btn btn-white btn-small mt-50" type="submit" value="Register">
+            <br>
+            <h1>REGISTER</h1>
+            <p>Please provide the following information to create new account. Already a Member ?
+                <a href="/login" style="text-decoration: none;">Log in.</a></p> <br>
+            <div><label> Full name : </label><input type="text" name="name">  </div>
+            <div><label> Martian code : </label><input type="text" name="code"> </div>
+            <div><label> Password : </label><input type="text" name="password"> </div>
+            <div><label> Species : </label><input type="text" name="name">  </div>
+            <div><label> Origin Planet : </label><input type="text" name="code"> </div>
+            <button type="submit" > REGISTER </button>
         </form>
     </div>
 </div>
-
+</div>
 </body>
 </html>
