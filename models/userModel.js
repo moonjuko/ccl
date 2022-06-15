@@ -61,7 +61,7 @@ let insertUser = (userData) => new Promise((resolve, reject) => {
         "" + db.escape(userData.name) +
         "," + db.escape(userData.code) +
         "," + db.escape(userData.password) +
-        "" + db.escape(userData.species) +
+        "," + db.escape(userData.species) +
         "," + db.escape(userData.origin) +
         ")"
 
