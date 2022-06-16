@@ -3,15 +3,14 @@ const app = express();
 const port = 3000;
 const path = require("path");
 const db = require("./services/database.js");
+const ws = require("./services/websockets.js");
 
 app.use(express.static('public'));
 
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
-const ws = require('./services/websockets')
-
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 

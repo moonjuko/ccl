@@ -4,9 +4,6 @@ const router = express.Router();
 const authenticationService = require("../services/authentication.js");
 const userModel = require("../models/userModel")
 const userController = require("../controllers/userController")
-const userRouter = require("./user.js")
-
-router.use("/user", userRouter);
 
 router.get("/", (req, res) => {
     res.render("index");
@@ -27,12 +24,12 @@ router.get("/logout", (req, res,next) => {
     res.redirected("/");
 });
 
-router.get("/chat", (req,res,next) => {
-    res.render('chat');
-})
-
 router.post("/register", userController.insertUser);
 
 router.get("/register", (req, res) => {res.render("register")});
+
+router.get("/chat", (req, res) => {
+    res.render("chat");
+});
 
 module.exports = router;

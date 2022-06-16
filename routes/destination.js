@@ -4,13 +4,13 @@ const router = express.Router();
 const destinationController = require("../controllers/destinationController");
 const authenticationService = require("../services/authentication.js");
 
-//Middlewar
+//Middleware
 
 router.get("/:id/edit",authenticationService.authenticateJWT, authenticationService.checkIfAdmin);
 
 //Routes
 
-router.get("/", destinationController.getDestination);
+router.get("/", destinationController.getDestinations);
 
 router.get("/:id", destinationController.getDestination);
 

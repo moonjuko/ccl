@@ -1,7 +1,7 @@
 const destinationModel = require("../models/destinationModel");
 
 function getDestinations(req, res, next) {
-    destinationModel.getDestination()
+    destinationModel.getDestinations()
         .then((destinations) => res.render("destinations", {destinations}))
         .catch((error) => res.status(500).render("error", {error: {code: 500, message: "Server error"}}));
 }
@@ -26,7 +26,7 @@ function editDestination(req, res, next) {
             if(destination) {
                 res.render("editDestination", {destination});
             } else {
-                res.status(404).render("error", {error: {code: 404, message: "This destination is not available"}});
+                res.status(404).render("error", {error: {code: 404, message: "This flower is not available"}});
             }
         })
         .catch((error) => res.status(500).render("error", {error: {code: 500, message: "Server error"}}));
@@ -42,6 +42,7 @@ function updateDestination(req, res, next) {
 module.exports = {
     getDestinations,
     getDestination,
+    editDestination,
     editDestination,
     updateDestination
 }
