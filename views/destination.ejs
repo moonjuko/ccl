@@ -16,19 +16,16 @@
     <div id="abc">
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/destinations">DESTINATIONS</a></li>
+                <li><a href="">CONTACT</a></li>
             </ul>
         </nav>
     </div>
 </div>
-<div id="destination">
-    <h1 class="title">DESTINATIONS</h1>
-</div>
 <div class="card">
     <div class="left">
-        <img src="/image/ciri.jpeg" alt="ciri">
+        <img id="planetImage" src="<%= destination.planet %>" alt="ciri"">
     </div>
     <div class="right">
         <div class="product-info">
@@ -37,9 +34,24 @@
             <p><%= destination.context %></p>
         </div>
     </div>
+    <h2 id="landScape">LANDSCAPE</h2>
+</div>
+<div id="container">
+    <div class="photobanner">
+        <img class="first" src="<%= destination.image2 %>" alt="" />
+        <img src="<%= destination.image1 %>" alt="" />
+        <img src="<%= destination.image2 %>" alt="" />
+        <img src="<%= destination.image3 %>" alt="" />
+        <img src="<%= destination.image4 %>" alt="" />
+        <img src="<%= destination.image5 %>" alt="" />
+        <img src="<%= destination.image1 %>" alt="" />
+        <img src="<%= destination.image2 %>" alt="" />
+        <img src="<%= destination.image3 %>" alt="" />
+        <img src="<%= destination.image4 %>" alt="" />
+    </div>
 </div>
 <div class="plus">
-    <h1 > HUMAN POPULATION</h1>
+    <h1 id="humanPop" > HUMAN POPULATION</h1>
     <h2 ><%= destination.humanPop %></h2>
     <br><br>
     <h1 ><%= destination.alienPop %></h1>
@@ -49,11 +61,10 @@
     <h2 >50%</h2>
     <br>
     <br>
-    <h1 id="mapText" >MAP</h1>
 </div>
-<div>
-    <img class="map" src="./image/map1.jpeg" alt="map">
+<div class="parentElement">
+    <a class="btn btn-default btn-work" href="#">SELECT DESTINATION</a>
 </div>
-<button><a href="/confirmation">BUY</a></button>
+<footer></footer>
 </body>
 </html>

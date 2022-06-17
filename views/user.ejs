@@ -5,32 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/user.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <title>Terra Nova</title>
 </head>
 <body>
 <header></header>
+<div class="BG">
     <div id="abc">
         <nav>
             <ul>
-                <li><a href="/index">HOME</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/destinations">DESTINATIONS</a></li>
+                <li><a href="/users/7">CONTACT</a></li>
             </ul>
         </nav>
     </div>
 </div>
-<div class="container">
-    <div class="card">
-        <img src="https://lh3.googleusercontent.com/pZwZJ5HIL5iKbA91UGMUIPR0VJWa3K0vOGzDZmY6wU3EJBUdfsby3VEyxU162XxTyOyP3D154tjkr-4Jgcx8lygYUR8eB-jVmld4dsHi1c-mE_A8jKccseAG7bdEwVrcuuk6ciNtSw=s170-no" alt="Person" class="card__image">
-        <p class="userCode">Martian Code : <%= user.code %></p>
-        <div class="grid-container">
-            <p class="userName"> Name : <%= user.name %></p>
-            <p> Species : <%= user.species %>
-            <p> Origin : <%= user.origin %>
-
+<div class="id-card-wrapper">
+    <div class="id-card">
+        <div class="profile-row">
+            <div class="dp">
+                <div class="dp-arc-outer"></div>
+                <div class="dp-arc-inner"></div>
+                <img src="https://via.placeholder.com/420x420">
+            </div>
+            <div class="desc">
+                <h1 ><%= user.name %></h1>
+                <p > Usercode: <%= user.code %></p>
+                <p > Species: <%= user.species %></p>
+                <p > Origin Planet: <%= user.origin %></p>
+                <div class="parentElement">
+                    <a class="btn btn-default btn-work" href="#">SELECT DESTINATION</a>
+                </div>
+            </div>
         </div>
-        <button><a href="/destination" style="text-decoration: none;">CHOOSE A DESTINATION</a></button> <br>
     </div>
+
 </div>
 </body>
 </html>

@@ -29,7 +29,7 @@ router.post("/register", userController.insertUser);
 router.get("/register", (req, res) => {res.render("register")});
 
 router.get("/chat", (req, res) => {
-    res.render("chat");
+    res.render("chat.ejs");
 });
 
 module.exports = router;
