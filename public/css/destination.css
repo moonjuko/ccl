@@ -260,10 +260,6 @@ img {
     height: 400px;
 }
 
-#landScape {
-    margin: 3000px;
-}
-
 
 /*photobanner*/
 
@@ -293,7 +289,7 @@ img {
 
 
 
-@keyframes "bannermove" {
+@keyframes bannermove {
     0% {
         margin-left: 0px;
     }
@@ -305,7 +301,7 @@ img {
 
 
 
-@-webkit-keyframes "bannermove" {
+@-webkit-keyframes bannermove {
     0% {
         margin-left: 0px;
     }
