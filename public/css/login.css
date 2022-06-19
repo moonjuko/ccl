@@ -33,7 +33,7 @@ button {
     display: flex;
     width: 19%;
     padding: 10px;
-    margin: 90px 40px 40px 0px;
+    margin: 50px 40px 40px 0px;
     align-items:center;
     justify-content:center;
     font-family: "Raleway", sans-serif;
@@ -50,7 +50,7 @@ button {
     height:  800px;
     width: 1440px;
     display: block;
-    background-image:url("../images/loginBG.png") ;
+    background-image:url("../images/loginBG.webp") ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
