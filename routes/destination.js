@@ -4,6 +4,8 @@ const router = express.Router();
 const destinationController = require("../controllers/destinationController");
 const authenticationService = require("../services/authentication.js");
 
+router.use(authenticationService.authenticateJWT);
+
 //Middleware
 
 router.get("/:id/edit",authenticationService.authenticateJWT, authenticationService.checkIfAdmin);
@@ -17,5 +19,6 @@ router.get("/:id", destinationController.getDestination);
 router.post("/:id", destinationController.updateDestination);
 
 router.get("/:id/edit", destinationController.editDestination);
+
 
 module.exports = router;

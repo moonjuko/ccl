@@ -30,7 +30,7 @@ header {
 }
 
 .BG {
-    background: url("../images/BG-2.png");
+    background: url("../images/BG.webp");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -144,4 +144,26 @@ ul {
     text-decoration: none;
     color: rgb(255, 255, 255);
 
+}
+
+h1 {
+    font-weight: 900;
+    text-align: center;
+}
+h2 {
+    font-weight: 200;
+    color: white;
+}
+
+div.parentElement{text-align: center;}
+
+.btn-work {
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ad27ad;
 }

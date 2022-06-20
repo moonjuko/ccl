@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/user.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-    <title>Terra Nova</title>
+    <title>TERRA NOVA</title>
 </head>
 <body>
 <header></header>
@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="/">HOME</a></li>
                 <li><a href="/destinations">DESTINATIONS</a></li>
-                <li><a href="/users/7">CONTACT</a></li>
+                <li><a href="">ABOUT</a></li>
             </ul>
         </nav>
     </div>
@@ -27,7 +27,7 @@
             <div class="dp">
                 <div class="dp-arc-outer"></div>
                 <div class="dp-arc-inner"></div>
-                <img src="https://via.placeholder.com/420x420">
+                <img src="../images/userBG.png">
             </div>
             <div class="desc">
                 <h1 ><%= user.name %></h1>
@@ -35,7 +35,8 @@
                 <p > Species: <%= user.species %></p>
                 <p > Origin Planet: <%= user.origin %></p>
                 <div class="parentElement">
-                    <a class="btn btn-default btn-work" href="#">SELECT DESTINATION</a>
+                    <a class="btn btn-default btn-work" href="/destinations">SELECT DESTINATION</a>
+                    <a class="btn btn-default btn-work" href="/logout">LOGOUT</a>
                 </div>
             </div>
         </div>

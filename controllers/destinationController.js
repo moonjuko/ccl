@@ -39,10 +39,12 @@ function updateDestination(req, res, next) {
         .catch((error) => res.status(500).render("error", {error: {code: 500, message: "Server error"}}));
 }
 
+
+
 module.exports = {
     getDestinations,
     getDestination,
     editDestination,
     editDestination,
-    updateDestination
+    updateDestination,
 }

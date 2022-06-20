@@ -42,8 +42,7 @@ let deleteUser = (id) => new Promise((resolve, reject) => {
 
 let updateUser = (userData) => new Promise((resolve, reject) => {
     let sql = "UPDATE users SET" +
-        "image=" + db.escape(userData.image) +
-        ", name=" + db.escape(userData.name) +
+        " name=" + db.escape(userData.name) +
         ", code=" + db.escape(userData.code) +
         ", password=" + db.escape(userData.password) +
         ", species=" + db.escape(userData.species) +
@@ -58,8 +57,7 @@ let updateUser = (userData) => new Promise((resolve, reject) => {
 
 let insertUser = (userData) => new Promise((resolve, reject) => {
     console.log(userData);
-    let sql = "INSERT into users(image,name,code,password,species,origin) values (" +
-        "" + db.escape(userData.image) +
+    let sql = "INSERT into users(name,code,password,species,origin) values (" +
         "" + db.escape(userData.name) +
         "," + db.escape(userData.code) +
         "," + db.escape(userData.password) +

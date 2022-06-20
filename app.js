@@ -32,6 +32,8 @@ const destinationRouter = require("./routes/destination.js");
 app.use("/destinations", destinationRouter);
 const userRouter = require("./routes/user.js");
 app.use("/users", userRouter);
+const confirmationRouter = require("./routes/confirmation.js")
+app.use("/confirmation", confirmationRouter);
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);

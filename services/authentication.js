@@ -11,7 +11,7 @@ async function checkPassword(password, hash,) {
 
 function authenticateUser({code, password}, users, res) {
 
-    const user = users.find(u => {return u.code === code && u.password === password;});
+    const user = users.find(u => {return u.code === code && u.password === password});
 
     if(user && checkPassword(password, user.password)) {
         console.log(`user logged in: input pw-${password} /// user pw ${user.password}`)

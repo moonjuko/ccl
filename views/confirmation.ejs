@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERRA NOVA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/confirmation.css">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+<body>
+<script>
+
+</script>
+<div class="BG">
+  <div id="abc">
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/destinations">DESTINATIONS</a></li>
+        <li><a href="/">ABOUT</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 mx-auto">
+      <div class="tray">
+        <span class="text-green">Booking Confirmation</span>
+      </div>
+  <div class="row">
+    <div class="col-6 col-md-4 offset-md-2">
+    </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <div class="tray">
+        <p>Hi <%= user.code%> ,
+
+            We are so happy you were a part of the Terra Nova plan in <%= destination.name%>.
+
+            Thanks again for booking with us and we hope you’ll visit us again!</p>
+      </div>
+    <div class="col-md-4">
+      <div class="tray">
+         <span class="text-green"> User Information
+        </span>
+        <p> USERCODE : <%= user.code%></p>
+          <p> DESTINATION CHOSEN : <%= destination.name%> </p>
+
+      </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <div class="tray">
+        <span class="text-green"> Details
+        </span>
+        <p>All conditions for a comfortable and unforgettable stay have been created here. The gourmet restaurant serves amazing food and international cuisine, the spa offers a wide range of relaxing and revitalizing treatments, and the watersports center will keep active guests entertained.
+  <br>
+          The villa is 212 sq. m:
+<br>
+          2 bedrooms
+          2 bathrooms
+          living room
+          the Internet
+          satellite TV
+          mini bar
+          free drinking water
+          coffee / tea making facilities
+          terrace
+          private pool
+          outdoor dining area
+<br>
+          Maximum capacity 4 adults and 2 children.
+
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

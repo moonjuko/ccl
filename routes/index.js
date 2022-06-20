@@ -21,7 +21,7 @@ router.route("/login")
 
 router.get("/logout", (req, res,next) => {
     res.cookie("accessToken", {maxAge: 0});
-    res.redirected("/");
+    res.redirect("/");
 });
 
 router.post("/register", userController.insertUser);
@@ -31,5 +31,6 @@ router.get("/register", (req, res) => {res.render("register")});
 router.get("/chat", (req, res) => {
     res.render("chat.ejs");
 });
+
 
 module.exports = router;

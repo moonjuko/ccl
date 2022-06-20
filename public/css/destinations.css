@@ -51,7 +51,7 @@ a > .card {
 }
 
 a > .card:hover {
-    top: -10px;
+    top: -30px;
 }
 
 
@@ -91,6 +91,7 @@ h1 {
     font-size: 40px;
     display: inline-block;
     margin-bottom: 10px;
+    margin-top: -120px;
 }
 
 i.fa.fa-search {
