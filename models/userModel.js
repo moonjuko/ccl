@@ -1,4 +1,5 @@
 const db = require("../services/database").config;
+const bcrypt = require("bcrypt");
 
 let getUsers = () => new Promise((resolve, reject) => {
     db.query("SELECT * from users", (err, users, fields) => {
@@ -55,12 +56,17 @@ let updateUser = (userData) => new Promise((resolve, reject) => {
     });
 });
 
-let insertUser = (userData) => new Promise((resolve, reject) => {
+let insertUser = (userData) => new Promise(async (resolve, reject) => {
     console.log(userData);
+
+    let encryptedPassword = await bcrypt.hash(userData.password, 10);
+
+    console.log(encryptedPassword)
+
     let sql = "INSERT into users(name,code,password,species,origin) values (" +
         "" + db.escape(userData.name) +
         "," + db.escape(userData.code) +
-        "," + db.escape(userData.password) +
+        "," + db.escape(encryptedPassword) +
         "," + db.escape(userData.species) +
         "," + db.escape(userData.origin) +
         ")"

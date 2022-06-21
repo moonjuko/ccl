@@ -21,7 +21,7 @@
       <ul>
         <li><a href="/">HOME</a></li>
         <li><a href="/destinations">DESTINATIONS</a></li>
-        <li><a href="/">ABOUT</a></li>
+          <li><a href="/users/<%= user.id %>">USER</a></li>
       </ul>
     </nav>
   </div>
@@ -48,7 +48,10 @@
       <div class="tray">
          <span class="text-green"> User Information
         </span>
-        <p> USERCODE : <%= user.code%></p>
+          <p> NAME : <%= user.name%></p>
+          <p> USERCODE : <%= user.code%></p>
+          <p> SPECIES : <%= user.species%></p>
+          <p> ORIGIN : <%= user.origin%></p>
           <p> DESTINATION CHOSEN : <%= destination.name%> </p>
 
       </div>
@@ -60,7 +63,7 @@
         <p>All conditions for a comfortable and unforgettable stay have been created here. The gourmet restaurant serves amazing food and international cuisine, the spa offers a wide range of relaxing and revitalizing treatments, and the watersports center will keep active guests entertained.
   <br>
           The villa is 212 sq. m:
-<br>
+         <br>
           2 bedrooms
           2 bathrooms
           living room
@@ -72,14 +75,12 @@
           terrace
           private pool
           outdoor dining area
-<br>
+        <br>
           Maximum capacity 4 adults and 2 children.
 
         </p>
-      </div>
-    </div>
+  </div>
     </div>
   </div>
-</div>
 </body>
 </html>

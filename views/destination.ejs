@@ -36,14 +36,14 @@
             <ul>
                 <li><a href="/">HOME</a></li>
                 <li><a href="/destinations">DESTINATIONS</a></li>
-                <li><a href="/">ABOUT</a></li>
+                <li><a href="/users/<%= user.id %>">USER</a></li>
             </ul>
         </nav>
     </div>
 </div>
 <div class="card">
     <div class="left">
-        <img id="planetImage" src="<%= destination.planet %>" alt="ciri"">
+        <img id="planetImage" src="<%= destination.planet %>" alt="ciri">
     </div>
     <div class="right">
         <div class="product-info">

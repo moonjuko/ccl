@@ -2,7 +2,7 @@ const destinationModel = require("../models/destinationModel");
 
 function getDestinations(req, res, next) {
     destinationModel.getDestinations()
-        .then((destinations) => res.render("destinations", {destinations}))
+        .then((destinations) => res.render("destinations", {destinations, user:req.user}))
         .catch((error) => res.status(500).render("error", {error: {code: 500, message: "Server error"}}));
 }
 
@@ -11,7 +11,7 @@ function getDestination(req, res, next) {
         .then((destination) => {
             console.log(destination);
             if(destination) {
-                res.render("destination", {destination});
+                res.render("destination",  {destination, user:req.user});
             } else {
                 res.status(404).render("error", {error: {code: 404, message: "This destination is not available"}});
             }

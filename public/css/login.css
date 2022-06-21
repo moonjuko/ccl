@@ -110,3 +110,7 @@ input {
     font-size: 30px;
     font-family: "Quicksand", sans-serif;
 }
+
+input[type=text], input[type=password] {
+
+}

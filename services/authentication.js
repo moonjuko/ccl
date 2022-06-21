@@ -11,16 +11,15 @@ async function checkPassword(password, hash,) {
 
 function authenticateUser({code, password}, users, res) {
 
-    const user = users.find(u => {return u.code === code && u.password === password});
+    const user = users.find(u => {return u.code === code;});
 
-    if(user && checkPassword(password, user.password)) {
-        console.log(`user logged in: input pw-${password} /// user pw ${user.password}`)
+    if(user &&checkPassword(password, user.password)) {
         const accessToken = jwt.sign({id: user.id, code: user.code}, ACCESS_TOKEN_SECRET);
         res.cookie("accessToken", accessToken);
         console.log(accessToken);
         res.redirect("/users/" + user.id);
     } else {
-        res.send("code or password are incorrect");
+        res.send("Code or password are incorrect");
     }
 }
 

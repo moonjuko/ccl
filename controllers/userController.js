@@ -1,5 +1,6 @@
 const userModel = require("../models/userModel");
 
+
 function getUsers(req, res, next) {
     userModel.getUsers()
         .then((users) => res.render("users", {users}))
@@ -11,7 +12,7 @@ function getUser(req, res, next) {
         .then((user) => {
             console.log(user);
             if(user) {
-                res.render("user", {user});
+                res.render("user", {user:user});
             } else {
                 res.status(404).render("error", {error: {code: 404, message: "This user is not available"}});
             }
