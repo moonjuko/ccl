@@ -14,7 +14,7 @@ function authenticateUser({code, password}, users, res) {
     const user = users.find(u => {return u.code === code;});
 
     if(user &&checkPassword(password, user.password)) {
-        const accessToken = jwt.sign({id: user.id, code: user.code}, ACCESS_TOKEN_SECRET);
+        const accessToken = jwt.sign({id: user.id, code: user.code, name: user.name , origin: user.origin}, ACCESS_TOKEN_SECRET);
         res.cookie("accessToken", accessToken);
         console.log(accessToken);
         res.redirect("/users/" + user.id);

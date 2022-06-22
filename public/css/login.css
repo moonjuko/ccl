@@ -2,11 +2,6 @@
 
 body {
     background-color: #100113;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
     color: white;
     font-family: "Quicksand", sans-serif;
 
@@ -14,47 +9,49 @@ body {
 
 p {
     text-align: left;
-    width: 450px;
     font-weight: 100;
     font-size: 25px;
-    text-decoration: none;}
+   }
 
 h1{
-    font-family: "Raleway", sans-serif;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
+    font-weight: 900;
+    margin: 0;
 }
 
-a {
-    color: white;
+h2 {
+    font-size: 35px;
 }
+
 
 button {
-    display: flex;
-    width: 19%;
-    padding: 10px;
-    margin: 50px 40px 40px 0px;
-    align-items:center;
-    justify-content:center;
-    font-family: "Raleway", sans-serif;
-    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ad27ad;
     color: white;
-    background-color: #6512b9;
-    font-weight: 330;
-    text-decoration: none;
+    font-size: 20px;
+}
+
+#btn-parent{
+    text-align: left;
 }
 
 
 .box {
     position: relative;
-    height:  800px;
-    width: 1440px;
-    display: block;
+    display: flex;
     background-image:url("../images/loginBG.webp") ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
 }
 
 .glowing::before{
@@ -85,22 +82,20 @@ button {
 }
 
 .textContainer {
-    margin: 0px 0px 40px 20px;
     font-size: 30px;
     color: #fff;
-    width: 600px;
-    height: 550px;
-    padding: 10px 30px 0px 50px;
     border-radius: 15px;
+    padding: 30px;
+    font-family: "Quicksand", sans-serif;
+
 
 }
 
 .container {
     margin: 0;
     padding: 0;
-    width: 660px;
-    height: 800px;
     background: linear-gradient(90deg, #FF41E0, transparent);
+
 }
 
 input {
@@ -111,6 +106,23 @@ input {
     font-family: "Quicksand", sans-serif;
 }
 
-input[type=text], input[type=password] {
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px ;
+  }
+    h2 {
+       font-size: 20px;
+       }
+label {
+    font-size: 25px;
+    margin: 0;
+}
+p {
+    font-size: 20px;
+}
+    #btn-parent{
+        text-align: center;
+    }
 
 }
+

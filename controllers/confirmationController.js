@@ -1,6 +1,7 @@
 const userModel = require("../models/userModel");
 const destinationModel = require("../models/destinationModel");
 const {authenticateJWT} = require("../services/authentication");
+const {authenticateUser} = require("../services/authentication")
 
 function getConfirmation(req, res, next) {
     let user;

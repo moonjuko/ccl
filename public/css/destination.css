@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Koulen&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@500;600;700;800;900&family=Orelega+One&family=Quicksand:wght@300;400;500;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,400;1,500;1,800;1,900&family=Righteous&display=swap');
 
-/*reset*/
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
-
 }
 
 body {
@@ -17,9 +16,9 @@ html {
 
 }
 
-img {
-    margin-top: 110px;
-}
+/*img {*/
+/*    margin-top: 110px;*/
+/*}*/
 
 /*product info */
 
@@ -95,13 +94,13 @@ h4.dis span {
 /*main card*/
 
 .card {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    height: 600px;
-    width: 1000px;
-    margin: 0 auto;
-    padding-top: 80px;
-
 
 }
 .details {
@@ -110,92 +109,42 @@ h4.dis span {
 }
 .left {
     content: "";
-    height: 395px;
-    width: 330px;
-    display: flex;
-    align-items: center;
-    margin-left: 93px;
+    height: auto;
+    width: auto;
     border-radius: 0% 50% 50% 0%;
-    position: absolute;
     z-index: 5;
-}
-
-.left img {
-    margin-left: -40px;
 }
 
 .right {
     content: "";
-    height: 395px;
+    max-width: 500px;
+    max-height: 395px;
     width: 550px;
     z-index: 3;
-    margin-left: 350px;
-    margin-bottom: 200px;
-    margin-top: 100px;
-}
+    padding: 50px;
+    }
 
-.product-info {
-    position: absolute;
-    margin-left: 245px;
-    height: 394px;
-    width: 305px;
-    z-index: 10;
-    font-size: 20px;
+/*!* Responsive layout - makes a one column layout instead of a two-column layout *!*/
+/*@media (max-width: 800px) {*/
+/*    .right, .left {*/
+/*        flex: 100%;*/
+/*    }*/
+/*}*/
 
-}
+/*.product-info {*/
+/*    position: absolute;*/
+/*    margin-left: 245px;*/
+/*    height: 394px;*/
+/*    width: 305px;*/
+/*    z-index: 10;*/
+/*    font-size: 20px;*/
 
-#destination {
-    text-align: center;
-    margin-top: 90px;
-}
+/*}*/
 
-#abc {
-    width: 100%;
-    height: 10px;
-    margin: 0;
-    background-size: cover;
-    font-size: 20px;
-}
-nav {
-    width: 100%;
-}
-nav ul {
-    position: relative;
-    text-align: center;
-}
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    transition: 0.7s all;
-}
-
-nav {
-    height: 360px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 0px;
-}
-
-a {
-    padding: 0px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-li{
-    padding: 50px 80px 0px 80px;
-}
-
-ul {
-    padding: 0px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-
-}
 
 p {
     color: white;
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 100px;
 
 }
@@ -204,18 +153,6 @@ p {
     text-align: center;
 }
 
-.map {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 800px;
-    height: 450px;
-    margin-bottom: 100px;
-}
-
-#mapText {
-    margin-bottom: -80px;
-}
 
 div.parentElement{text-align: center;}
 
@@ -234,44 +171,33 @@ div.parentElement{text-align: center;}
 }
 
 #container {
-    width: 1000px;
+    display: flex;
     overflow: hidden;
-    margin: 50px auto;
-    background: white;
-}
-
-/*header*/
-header {
-}
-
-#ld{
-    display: grid;
 }
 
 img {
-    width: 300px;
-    height: 500px;
+    width: 250px;
+    height: 350px;
 }
 
 #planetImage {
     width:400px;
     height: 400px;
+    padding: 30px;
 }
 
 
 /*photobanner*/
 
 .photobanner {
-    height: 800px;
-    margin: -200px;
     align-content: center;
+    max-height: 350px;
 
 }
 
 #container {
-   width: 100vw;
     background-color: transparent;
-    margin-top: 180px;
+    margin: 100px 12% 0 12%;
 
 }
 
@@ -292,11 +218,10 @@ img {
         margin-left: 0px;
     }
     100% {
-        margin-left: -1250px;
+        margin-left: -1500px;
     }
 
 }
-
 
 
 @-webkit-keyframes bannermove {
@@ -304,32 +229,34 @@ img {
         margin-left: 0px;
     }
     100% {
-        margin-left: -1250px;
+        margin-left: -1500px;
     }
 
 }
 
-footer {
-    height: 80px;
-}
 
-#overlayWrapper {
-    display: none;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(100,100,100,0.4);
-    z-index: 200;
+@media (max-width: 600px) {
+.card  {
+    flex-direction: column;
 }
+    img {
+        width: 240px;
+        height: 350px;
+    }
 
-#overlay {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    background-color: white;
-    top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    z-index: 200;
+    .photobanner {
+        align-content: center;
+        max-height: 350px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+   p {
+       font-size: 15px;
+   }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TERRA NOVA</title>
     <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 <div class="box glowing">
@@ -13,12 +14,15 @@
         <div class="textContainer">
             <form action="../login" method="post">
                 <br>
+                <h1>Welcome back!</h1>
                 <h1>LOGIN</h1>
                 <p>You don’t have an account ?
-                    <a href="/register" style="text-decoration: none;">Sign Up.</a></p> <br>
+                    <a href="/register">SIGN UP.</a></p> <br>
                 <div><label> Martian code : </label><input type="text" name="code"> </div><br>
                 <div><label> Password : </label><input type="text" name="password"> </div>
-                <button type="submit" > LOGIN</button>
+                <div id="btn-parent">
+                <button type="submit">LOGIN </button>
+                </div>
             </form>
         </div>
     </div>
