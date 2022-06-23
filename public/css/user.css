@@ -14,19 +14,20 @@ html {
 h1 {
     color: #FF41E0;
     font-weight: 500;
-    font-size: 45px;
     display: inline-block;
-    margin-bottom: 10px;
+    font-size: 50px ;
+
 }
 
-i.fa.fa-search {
-    margin-left: 90px;
+p {
+    font-size:30px ;
 }
+
 
 .product-name i {
     color: #ffffff;
     transition: 0.3s all ease;
-    margin: 0px 12px;
+    margin: 0px;
 }
 
 .product-name i:hover {
@@ -44,23 +45,18 @@ h3 {
 h2 {
     color: #ffffff;
     font-weight: 800;
-    font-size: 30px;
     font-weight: 200;
-    margin-bottom: 10px;
 }
 
 h4 {
     display: inline-block;
     color: #ffffff;
-    font-size: 20px;
 }
 
 h4.dis {
     display: inline-block;
     color: #ffffff;
     font-weight: 400;
-    font-size: 17px;
-    margin-left: 30px;
     text-decoration: line-through #ea3201;
 }
 
@@ -68,19 +64,18 @@ h4.dis span {
     text-decoration: line-through #ea3201;
 }
 
-
-
 .id-card-wrapper {
     height: 100vh;
     width:100%;
     display: flex;
+    margin-top: -60px;
 }
 .id-card {
     flex-basis: 100%;
     max-width: 50em;
     margin: auto;
     color: #fff;
-    padding: 1em;
+    padding: 4em;
     background-image:linear-gradient(#000000, #200453);
     box-shadow: 0px 0px 3px 1px #8c62b7, inset 0px 0px 3px 1px #a383c4;
 }
@@ -91,7 +86,6 @@ h4.dis span {
 .profile-row .dp {
     flex-basis: 33.3%;
     position: relative;
-    margin: 24px;
     align-self: center;
 }
 .profile-row .desc {
@@ -103,9 +97,12 @@ h4.dis span {
     border-radius: 50%;
     display: block;
     box-shadow: 0px 0px 4px 3px #12a0a0;
+
+
 }
 .profile-row .desc {
     padding: 1em;
+    text-align: right;
 }
 
 .profile-row .dp .dp-arc-inner {
@@ -166,15 +163,56 @@ h4.dis span {
 }
 
 
-div.parentElement{text-align: left;}
+@media (max-width: 600px) {
+    .profile-row .dp img {
+        max-width: 100%;
+        border-radius: 50%;
+        display: block;
+        box-shadow: 0px 0px 4px 3px #12a0a0;
+    }
+    .profile-row .desc {
+        padding: 10px;
+    }
 
-.btn-work {
-    width: 250px;
-    height: 50px;
-    margin: 0 auto;
-    display: inline-block;
-    line-height: 50px;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #ad27ad;
+    p {
+        font-size: 23px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .parentElement {
+    }
+
+    .btn-work {
+        font-size: 20px;
+        margin-top: -50px;
+    }
+
+    .id-card {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .profile-row {
+        flex-direction: column;
+
+    }
+
+    .desc {
+        margin-top: 20px;
+
+    }
+
+    .profile-row .desc {
+       margin-top: 60px;
+     text-align: center;
+        background-image:none;
+        box-shadow:none ;
+    }
+
+
 }

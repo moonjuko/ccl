@@ -10,13 +10,14 @@
     <title>TERRA NOVA</title>
 </head>
 <body>
+<div id="BG">
 <!-- Navbar -->
 <header>
     <nav>
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/destinations">DESTINATIONS</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="/users/<%= user.id %>">USER</a></li>
         </ul>
     </nav>
 </header>v>
@@ -34,11 +35,11 @@
                 <p > Usercode: <%= user.code %></p>
                 <p > Species: <%= user.species %></p>
                 <p > Origin Planet: <%= user.origin %></p>
-                <div class="parentElement">
-                    <a class="btn btn-default btn-work" href="/destinations">SELECT DESTINATION</a>
-                    <a class="btn btn-default btn-work" href="/logout">LOGOUT</a>
-                </div>
             </div>
+        </div>
+        <div class="parentElement">
+            <a class="btn btn-default btn-work" href="/destinations">DESTINATIONS</a>
+            <a class="btn btn-default btn-work" href="/logout">LOGOUT</a>
         </div>
     </div>
 

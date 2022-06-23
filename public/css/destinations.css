@@ -8,11 +8,12 @@
 
 }
 html {
-    background-image: linear-gradient(#000000, #200453);
 
 }
 
 body{
+    background-attachment: fixed;
+    background-image: linear-gradient(#000000, #200453);
 }
 
 .container{
@@ -27,6 +28,7 @@ body{
 
 .stretch {
     align-items: stretch;
+
 }
 
 a {
@@ -53,30 +55,12 @@ a > .card:hover {
 }
 
 
-
 .cardText{
-    margin: 25px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-.textContainer {
-    background-color: #1f1f1f;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 250px;
-    width: 10vw;
-    flex-grow:8;
-}
-
-.textContainer p, .textContainer h3 {
-    margin-top: 15px;
 }
 
 /*product info */
@@ -90,10 +74,7 @@ h1 {
     margin-top: -120px;
 }
 
-.product-name i:hover {
-    color: #ff39ce;
-    cursor: pointer;
-}
+
 
 h3 {
     color: #FF41E0;
@@ -157,18 +138,6 @@ p {
     text-align: center;
 }
 
-.map {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 800px;
-    height: 450px;
-    margin-bottom: 100px;
-}
-
-#mapText {
-    margin-bottom: -80px;
-}
 
 button {
     display: flex;
@@ -205,6 +174,59 @@ img {
 
 img {
     padding-top: 20px;
+}
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 13px;
+    }
+    #planetImage {
+        width: 250px;
+        height: 250px;
+        margin-bottom: -40px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    a > .card {
+        display: grid;
+        flex-grow: 1;
+        background-image: linear-gradient(#000000, #200453);
+        border: 0.5mm solid #e8adef;
+        box-shadow: 0px 0px 2px #6512b9;
+        min-width: 200px;
+        height: 350px;
+        width: 20vw;
+        position: center;
+        top: 0;
+        transition: top ease 0.5s;
+    }
+
+
+
+    img {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    a > .card:hover {
+        top: 0 ;
+    }
+
+
 }
 
 

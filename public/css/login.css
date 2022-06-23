@@ -3,14 +3,16 @@
 body {
     background-color: #100113;
     color: white;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Raleway", sans-serif;
+
 
 }
 
 p {
     text-align: left;
     font-weight: 100;
-    font-size: 25px;
+    font-size: 30px;
+    padding: 3px;
    }
 
 h1{
@@ -20,9 +22,12 @@ h1{
     margin: 0;
 }
 
+
 h2 {
-    font-size: 35px;
+    font-size: 40px;
+    padding: 3px;
 }
+
 
 
 button {
@@ -42,6 +47,11 @@ button {
     text-align: left;
 }
 
+a {
+    font-weight: 900;
+
+}
+
 
 .box {
     position: relative;
@@ -51,20 +61,11 @@ button {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    background-attachment: fixed;
 }
 
-.glowing::before{
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    background: linear-gradient(45deg, #e8f74d, #ff6600d9, #ad27ad, #bd2681, #6512b9, #ff3300de, #5aabde);
-    background-size: 400%;
-    width: calc(100% + 5px);
-    height: calc(100% + 5px);
-    z-index: -1;
-    animation: glower 20s linear infinite;
+.glowing{
+    height: 100vh;
 }
 
 @keyframes glower {
@@ -87,6 +88,7 @@ button {
     border-radius: 15px;
     padding: 30px;
     font-family: "Quicksand", sans-serif;
+    margin: 70px;
 
 
 }
@@ -99,30 +101,49 @@ button {
 }
 
 input {
-    background: transparent;
     border: none;
+    background: rgba(255,255,255, 0.3);
     color: white;
     font-size: 30px;
     font-family: "Quicksand", sans-serif;
+    margin: 5px;
 }
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 40px ;
+    font-size: 30px ;
   }
     h2 {
        font-size: 20px;
        }
 label {
-    font-size: 25px;
+    font-size: 20px;
     margin: 0;
 }
+    input {
+        border: none;
+        background: rgba(255,255,255, 0.3);
+        color: white;
+        font-size: 25px;
+        font-family: "Quicksand", sans-serif;
+    }
 p {
     font-size: 20px;
 }
     #btn-parent{
         text-align: center;
     }
+    .box {
+     background-attachment: fixed;
+    }
 
+    .glowing {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .textContainer {
+        margin: 0;
+    }
 }
 

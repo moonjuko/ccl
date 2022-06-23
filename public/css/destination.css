@@ -16,16 +16,114 @@ html {
 
 }
 
-/*img {*/
-/*    margin-top: 110px;*/
-/*}*/
-
-/*product info */
 
 .title {
     color: yellow;
     font-weight: 900;
 }
+
+#photoBanner {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+    margin-bottom: -80px;
+}
+
+main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+}
+
+div.item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: coral;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+}
+
+div.item:nth-of-type(1) {
+    --offset: 1;
+    background-color: #90f1ef;
+}
+div.item:nth-of-type(2) {
+    --offset: 2;
+    background-color: #ff70a6;
+}
+div.item:nth-of-type(3) {
+    --offset: 3;
+    background-color: #ff9770;
+}
+div.item:nth-of-type(4) {
+    --offset: 4;
+    background-color: #ffd670;
+}
+div.item:nth-of-type(5) {
+    --offset: 5;
+    background-color: #e9ff70;
+}
+
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+}
+
+input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+}
+
+input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carousel {
+    --position: 4;
+}
+
+input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+    --position: 5;
+}
+
 
 
 h1 {
@@ -63,7 +161,6 @@ h2 {
     font-weight: 800;
     font-size: 30px;
     font-weight: 200;
-    margin-bottom: 10px;
 }
 
 h4 {
@@ -94,7 +191,7 @@ h4.dis span {
 /*main card*/
 
 .card {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -119,27 +216,10 @@ h4.dis span {
     content: "";
     max-width: 500px;
     max-height: 395px;
-    width: 550px;
     z-index: 3;
     padding: 50px;
     }
 
-/*!* Responsive layout - makes a one column layout instead of a two-column layout *!*/
-/*@media (max-width: 800px) {*/
-/*    .right, .left {*/
-/*        flex: 100%;*/
-/*    }*/
-/*}*/
-
-/*.product-info {*/
-/*    position: absolute;*/
-/*    margin-left: 245px;*/
-/*    height: 394px;*/
-/*    width: 305px;*/
-/*    z-index: 10;*/
-/*    font-size: 20px;*/
-
-/*}*/
 
 
 p {
@@ -154,31 +234,25 @@ p {
 }
 
 
-div.parentElement{text-align: center;}
+div.parentElement{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -150px;
+}
 
 .btn-work {
-    width: 250px;
-    height: 50px;
     margin: 0 auto;
     display: inline-block;
-    line-height: 50px;
     text-align: center;
     background-color: #ad27ad;
+    color: white;
+    font-size: 15px;
 }
 
 #humanPop {
     margin-top: 30px;
 }
 
-#container {
-    display: flex;
-    overflow: hidden;
-}
-
-img {
-    width: 250px;
-    height: 350px;
-}
 
 #planetImage {
     width:400px;
@@ -186,77 +260,52 @@ img {
     padding: 30px;
 }
 
-
-/*photobanner*/
-
-.photobanner {
-    align-content: center;
-    max-height: 350px;
-
-}
-
-#container {
-    background-color: transparent;
-    margin: 100px 12% 0 12%;
-
-}
-
-/*keyframe animations*/
-.first {
-
-    -webkit-animation: bannermove 30s linear infinite;
-    -moz-animation: bannermove 30s linear infinite;
-    -ms-animation: bannermove 30s linear infinite;
-    -o-animation: bannermove 30s linear infinite;
-    animation: bannermove 30s linear infinite;
+img {
+    width:300px;
+    height:400px;
 }
 
 
 
-@keyframes bannermove {
-    0% {
-        margin-left: 0px;
+@media (max-width: 700px) {
+    * {
+        align-items: center;
     }
-    100% {
-        margin-left: -1500px;
-    }
-
-}
-
-
-@-webkit-keyframes bannermove {
-    0% {
-        margin-left: 0px;
-    }
-    100% {
-        margin-left: -1500px;
-    }
-
-}
-
-
-@media (max-width: 600px) {
 .card  {
     flex-direction: column;
 }
-    img {
-        width: 240px;
-        height: 350px;
-    }
 
-    .photobanner {
-        align-content: center;
-        max-height: 350px;
-    }
+
+
 
     h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     h2 {
-        font-size: 25px;
+        font-size: 20px;
     }
    p {
        font-size: 15px;
    }
+   #planetImage {
+       width: 250px;
+       height: 250px;
+       margin-bottom: -40px;
+   }
+
+    div.parentElement{
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: -150px;
+    }
+    .btn-work {
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+        background-color: #ad27ad;
+        color: white;
+        font-size: 15px;
+    }
+
 }
