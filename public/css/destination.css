@@ -29,7 +29,7 @@ html {
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: -80px;
 }
 
@@ -213,6 +213,7 @@ h4.dis span {
 }
 
 .right {
+    margin-bottom: 50px;
     content: "";
     max-width: 500px;
     max-height: 395px;
