@@ -73,6 +73,12 @@ a {
     color: white;
 }
 
+a:hover {
+    color: rgba(230, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+
 /* Responsive Nav Bar */
 @media all and (max-width: 600px) {
     nav ul {
@@ -83,6 +89,7 @@ a {
     }
 
     #title {
+        margin-top: 80px;
         font-size: 50px;
         text-shadow: 5px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 
@@ -103,6 +110,12 @@ div.parentElement{text-align: center;}
     line-height: 50px;
     text-align: center;
     background-color: #ff39ce;
+}
+
+.btn-work:hover {
+
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
 
 header li {
